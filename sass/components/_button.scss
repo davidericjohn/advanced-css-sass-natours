@@ -1,4 +1,6 @@
 .btn {
+
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -8,6 +10,10 @@
     display: inline-block;
     position: relative;
     font-size: $default-font-size;
+
+    // FOR BUTTON ELEMENTS
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -23,6 +29,9 @@
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+
+    // FOR BUTTON ELEMENTS
+    outline: none;
   }
 
   &--white {
