@@ -67,10 +67,22 @@
 
     &--1 {
       background-image: linear-gradient(
-          to right bottom, 
-          $color-secondary-light, 
-          $color-secondary-dark),
-        url(../img/nat-5.jpg);
+        to right bottom, 
+        $color-secondary-light, 
+        $color-secondary-dark),
+          url(../img/nat-5-small.jpg);
+
+      // for high resolution screen and width larger than 600px 
+      // or for screen larger than 2000px
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+          background-image: linear-gradient(
+            to right bottom, 
+            $color-secondary-light, 
+            $color-secondary-dark),
+              url(../img/nat-5.jpg);
+      }
+
     }
 
     &--2 {
@@ -78,15 +90,37 @@
           to right bottom, 
           $color-primary-light, 
           $color-primary-dark),
-        url(../img/nat-6.jpg);
+        url(../img/nat-6-small.jpg);
+
+      // for high resolution screen and width larger than 600px 
+      // or for screen larger than 2000px
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+          background-image: linear-gradient(
+            to right bottom, 
+            $color-primary-light, 
+            $color-primary-dark),
+          url(../img/nat-6.jpg);
+      }
     }
 
     &--3 {
       background-image: linear-gradient(
-          to right bottom, 
-          $color-tertiary-light, 
-          $color-tertiary-dark),
-        url(../img/nat-7.jpg);
+        to right bottom, 
+        $color-tertiary-light, 
+        $color-tertiary-dark),
+          url(../img/nat-7-small.jpg);
+
+      // for high resolution screen and width larger than 600px 
+      // or for screen larger than 2000px
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+          background-image: linear-gradient(
+            to right bottom, 
+            $color-tertiary-light, 
+            $color-tertiary-dark),
+              url(../img/nat-7.jpg);
+      }
     }
   }
 
@@ -148,7 +182,6 @@
       }
     }
   }
-
 
   // BACK SIDE STYLING
   &__cta {

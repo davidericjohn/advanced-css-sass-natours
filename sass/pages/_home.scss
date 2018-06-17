@@ -14,21 +14,21 @@
     to right bottom, 
     rgba($color-primary-light, .8), 
     rgba($color-primary-dark, .8)),
-  url(../img/nat-4.jpg);
+  url(../img/nat-4-small.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
 
   // for high resolution screen and width larger than 600px 
   // or for screen larger than 2000px
-  // @media (min-resolution: 192dpi) and (min-width: 37.5em),
-  //   (min-width: 125em) {
-  //   background-image: linear-gradient(
-  //   to right bottom, 
-  //   rgba($color-primary-light, 0.8), 
-  //   rgba($color-primary-dark, 0.8)),
-  //   url(../img/nat-4-large.jpg);
-  // }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
+    background-image: linear-gradient(
+    to right bottom, 
+    rgba($color-primary-light, 0.8), 
+    rgba($color-primary-dark, 0.8)),
+    url(../img/nat-4.jpg);
+  }
 
   & > * {
     transform: skewY(7deg);
@@ -73,22 +73,22 @@
       rgba($color-white, .9) 0%,
       rgba($color-white, .9) 50%,
       transparent 50%),
-    url(../img/nat-10.jpg);
+    url(../img/nat-10-small.jpg);
   background-size: 100%;
   border-radius: $default-border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
   // for high resolution screen and width larger than 600px 
   // or for screen larger than 2000px
-  // @media (min-resolution: 192dpi) and (min-width: 37.5em),
-  //   (min-width: 125em) {
-  //   background-image: linear-gradient(
-  //     105deg, 
-  //     rgba($color-white, .9) 0%,
-  //     rgba($color-white, .9) 50%,
-  //     transparent 50%),
-  //    url(../img/nat-10-large.jpg);
-  // }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
+    background-image: linear-gradient(
+      105deg, 
+      rgba($color-white, .9) 0%,
+      rgba($color-white, .9) 50%,
+      transparent 50%),
+     url(../img/nat-10.jpg);
+  }
 
   @include respond(tab-land) {
     background-image: linear-gradient(
@@ -96,15 +96,27 @@
       rgba($color-white, .9) 0%,
       rgba($color-white, .9) 65%,
       transparent 65%),
-    url(../img/nat-10.jpg);
-    background-size: cover;
+        url(../img/nat-10-small.jpg);
+      background-size: cover;
+
+    // for high resolution screen
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+      105deg, 
+      rgba($color-white, .9) 0%,
+      rgba($color-white, .9) 65%,
+      transparent 65%),
+        url(../img/nat-10.jpg);
+      background-size: cover;
+    }
+    
   }
   @include respond(tab-port) {
     background-image: linear-gradient(
       to right, 
       rgba($color-white, .9) 0%,
       rgba($color-white, .9) 100%),
-    url(../img/nat-10.jpg);
+    url(../img/nat-10-small.jpg);
   }
 
   &__form {
