@@ -67,6 +67,10 @@
     vertical-align: middle;
     padding: 3rem 5rem;
 
+    @include respond(phone) {
+      text-align: center;
+    }
+
     // @include respond(tab-land) {
     //   display: inline-block;
     //   width: 100%;
@@ -93,6 +97,10 @@
 
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(phone) {
+      text-align: left;
+    }
   }
 
   &:target {
