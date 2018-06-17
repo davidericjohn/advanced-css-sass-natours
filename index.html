@@ -24,11 +24,26 @@
     <div class="navigation__background">&nbsp;</div>
     <nav class="navigation__nav">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> About Natours</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your Benefits</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>01</span> About Natours</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>02</span>Your Benefits</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>03</span>Popular Tours</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>04</span>Stories</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>05</span>Book Now</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -48,7 +63,7 @@
   </header>
 
   <main>
-    <section class="section-about">
+    <section class="section-about" id="section-about">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">Exciting tours from adventurous people</h2>
       </div>
@@ -80,7 +95,7 @@
       </div>
     </section>
 
-    <section class="section-features">
+    <section class="section-features" id="section-features">
       <div class="row">
         <div class="col-1-of-4">
           <div class="feature-box">
@@ -125,7 +140,7 @@
       </div>
     </section>
 
-    <section class="section-tours">
+    <section class="section-tours" id="section-tours">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary u-margin-bottom-big">Most Popular Tours</h2>
       </div>
@@ -156,7 +171,7 @@
                   <p class="card__price--only">ONLY</p>
                   <p class="card__price--value">$297</p>
                 </div>
-                <a href="#" class="btn btn--white">Book Now!</a>
+                <a href="#modal" class="btn btn--white">Book Now!</a>
               </div>
             </div>
           </div>
@@ -186,7 +201,7 @@
                   <p class="card__price--only">ONLY</p>
                   <p class="card__price--value">$497</p>
                 </div>
-                <a href="#" class="btn btn--white">Book Now!</a>
+                <a href="#modal" class="btn btn--white">Book Now!</a>
               </div>
             </div>
           </div>
@@ -216,20 +231,19 @@
                   <p class="card__price--only">ONLY</p>
                   <p class="card__price--value">$897</p>
                 </div>
-                <a href="#" class="btn btn--white">Book Now!</a>
+                <a href="#modal" class="btn btn--white">Book Now!</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-
       <div class="u-center-text u-margin-top-big">
         <a href="#" class="btn btn--green">Discover all tours</a>
       </div>
     </section>
 
-    <section class="section-stories">
+    <section class="section-stories" id="section-stories">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
           <source src="img/video.mp4" type="video/mp4" />
@@ -276,7 +290,7 @@
       </div>
     </section>
 
-    <section class="section-book">
+    <section class="section-book" id="section-book">
       <div class="row">
         <div class="book">
           <div class="book__form">
@@ -327,11 +341,21 @@
       <div class="col-1-of-2">
         <div class="footer__navigation">
           <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Company</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Contact Us</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Terms</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -339,12 +363,38 @@
         <p class="footer__copyright">
           Built by
           <a href="https://www.linkedin.com/in/davidericjohn/" class="footer__link" target="_new">ERIC JOHN DAVID</a> using ADVANCED CSS AND SASS. Copyright &copy; by Jonas Schmedtmann, original author of this
-          page. This webpage may be used both for personal and commercial purposes with due credit to the original author. For more amazing and modern CSS techniques,
+          page. This webpage may be used both for personal and commercial purposes with due credit to the original author.
+          For more amazing and modern CSS techniques,
           <a href="http://codingheroes.io/" class="footer__link" target="_new">Click Here!</a>.
         </p>
       </div>
     </div>
   </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal__content">
+      <div class="modal__left">
+        <img src="img/nat-8.jpg" alt="Tour photo" class="modal__img">
+        <img src="img/nat-9.jpg" alt="Tour photo" class="modal__img">
+      </div>
+      <div class="modal__right">
+        <a href="#section-tours" class="modal__close">&times;</a>
+        <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+        <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+        <p class="modal__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nobis! Cupiditate corrupti ipsum illum nulla vel libero fugiat?
+          Quaerat adipisci ut illum doloremque corporis distinctio tenetur quia ex iusto iure? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Earum in esse ullam vitae est aspernatur perspiciatis accusantium nostrum quaerat?
+          Odio cupiditate reprehenderit accusamus aliquid earum minima sequi quod molestias nulla? Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Quasi quibusdam ea, corporis, possimus molestias enim ullam libero aliquam officia
+          doloremque rem unde temporibus consequatur ipsa maiores, amet labore impedit nobis? Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit.
+        </p>
+
+        <a href="#" class="btn btn--green">Book Now</a>
+      </div>
+    </div>
+  </div>
 
   <!--<section>
     <div class="row">

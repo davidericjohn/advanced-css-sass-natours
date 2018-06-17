@@ -42,10 +42,7 @@
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absoluteCenter;
     list-style: none;
     text-align: center;
   }
@@ -99,7 +96,7 @@
     opacity: 1;
   } 
 
-  // navigation icon
+  // creates the hamburger navigation icon
   &__icon {
     position: relative;
     margin-top: 3.5rem;
@@ -131,6 +128,7 @@
 
   }
 
+  // creates the hover effect
   &__button:hover &__icon::before {
     top: -1rem;
   }
@@ -139,6 +137,7 @@
     top: 1rem;
   }
 
+  // creates the transformation from burger icon to 'X' icon when clicked
   &__checkbox:checked + &__button &__icon {
     background-color: transparent;
   }
