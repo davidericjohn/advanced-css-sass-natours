@@ -1,2 +1,9 @@
+// libraries
 node_modules/*
 
+// firebase
+.firebaserc
+firebase.json
+
+// package
+build/*
