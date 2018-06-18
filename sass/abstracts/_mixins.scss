@@ -25,6 +25,7 @@ $breakpoint argument options:
 1em / 16px (default font size)
 ================================
 600px = 37.5em
+800px = 50em
 900px = 56.25em
 1200px = 75em
 1800px = 112.5em
@@ -36,12 +37,24 @@ ORDER: base + typography > general layout + grid > page layout > components
     @media (max-width: 37.5em) { @content }; // < 37.5em
   };
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) { @content }; // 56.25em
-  };
+    @media (max-width: 56.25em) { @content }; // < 56.25em
+  }; 
   @if $breakpoint == tab-land {
     @media (max-width: 75em) { @content }; // < 75em
+  };
+  @if $breakpoint == ipad-port {
+    @media (min-height: 50em) { @content }; // > 50em
   };
   @if $breakpoint == big-desktop {
     @media (min-width: 112.5em) { @content }; // > 112.5em
   };
 }
+
+/*
+for high resolution screen and width larger than 600px 
+or for screen larger than 2000px
+*/
+@mixin imageRespond() {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) { @content };
+};

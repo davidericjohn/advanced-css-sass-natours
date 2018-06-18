@@ -456,11 +456,16 @@ $breakpoint argument options:
 1em / 16px (default font size)
 ================================
 600px = 37.5em
+800px = 50em
 900px = 56.25em
 1200px = 75em
 1800px = 112.5em
 
 ORDER: base + typography > general layout + grid > page layout > components
+*/
+/*
+for high resolution screen and width larger than 600px 
+or for screen larger than 2000px
 */
 @keyframes moveInLeft {
   0% {
@@ -1166,6 +1171,11 @@ body {
   @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
+  @media (min-height: 50em) {
+    .header {
+      height: 90vh;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -1351,6 +1361,9 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (min-height: 50em) {
+    .section-about {
+      margin-top: -10vh; } }
   @media (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }
@@ -1402,10 +1415,6 @@ body {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg); } }
   @media (max-width: 75em) {
     .book {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10-small.jpg);
-      background-size: cover; } }
-  @media (max-width: 75em) and (min-resolution: 192dpi) {
-    .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
       background-size: cover; } }
   @media (max-width: 56.25em) {
@@ -1417,3 +1426,6 @@ body {
     @media (max-width: 75em) {
       .book__form {
         width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
